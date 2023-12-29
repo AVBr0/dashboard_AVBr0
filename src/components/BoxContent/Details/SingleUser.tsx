@@ -44,7 +44,7 @@ const SingleUser = () => {
           <LeftOutlined style={{ fontSize: 25 }} />
         </Button>
       </BtnContainer>
-      <Box paddingXS="20px">
+      <Box>
         <ImageWrapper width="100%" src={image} alt={image} />
       </Box>
       <Box5>

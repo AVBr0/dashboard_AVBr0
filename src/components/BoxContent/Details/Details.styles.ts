@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 type DetailsWrapperProps = {
   width?: string;
-  widthXL?: string;
-  widthLG?: string;
-  widthMD?: string;
+  widthxl?: string;
+  widthlg?: string;
+  widthmd?: string;
   height?: string;
-  heightXL?: string;
-  heightLG?: string;
-  heightMD?: string;
+  heightxl?: string;
+  heightlg?: string;
+  heightmd?: string;
   gap?: string;
   color?: string;
 };
@@ -27,22 +27,22 @@ const DetailsWrapper = styled.div<DetailsWrapperProps>`
 
   @media screen and ${({ theme }) => theme.media.XL} {
     grid-template-columns: repeat(3, 1fr);
-    width: ${({ widthXL }) => widthXL || '65%'};
-    height: ${({ heightXL }) => heightXL || '65%'};
+    width: ${({ widthxl }) => widthxl || '65%'};
+    height: ${({ heightxl }) => heightxl || '65%'};
   }
 
   @media screen and ${({ theme }) => theme.media.LG} {
     grid-template-columns: repeat(2, 1fr);
-    width: ${({ widthLG }) => widthLG || '75%'};
-    height: ${({ heightLG }) => heightLG || '75%'};
+    width: ${({ widthlg }) => widthlg || '75%'};
+    height: ${({ heightlg }) => heightlg || '75%'};
   }
 
   @media screen and ${({ theme }) => theme.media.MD} {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: minmax(120px, auto);
     max-width: 476px;
-    width: ${({ widthMD }) => widthMD || '100%'};
-    height: ${({ heightMD }) => heightMD || '100%'};
+    width: ${({ widthmd }) => widthmd || '100%'};
+    height: ${({ heightmd }) => heightmd || '100%'};
   }
 `;
 
@@ -52,7 +52,7 @@ type BoxProps = {
   flexDirection?: string;
   gap?: string;
   padding?: string;
-  paddingXS?: string;
+  paddingxs?: string;
   borderRadius?: string;
   border?: string;
   width?: string;
@@ -70,7 +70,7 @@ export const Box = styled.div<BoxProps>`
   width: ${({ width }) => width || '100%'};
 
   @media screen and ${({ theme }) => theme.media.XS} {
-    padding: ${({ paddingXS }) => paddingXS || '10px'};
+    padding: ${({ paddingxs }) => paddingxs || '10px'};
   }
 `;
 
@@ -147,25 +147,25 @@ export const ImageWrapper = styled.img<ImageWrapperProps>`
 
 type UlWrapperProps = {
   width?: string;
-  widthLG?: string;
-  widthMD?: string;
-  widthXS?: string;
+  widthlg?: string;
+  widthmd?: string;
+  widthxs?: string;
 };
 
 export const UlWrapper = styled.ul<UlWrapperProps>`
   width: ${({ width }) => width};
 
   @media screen and ${({ theme }) => theme.media.LG} {
-    width: ${({ widthLG }) => widthLG || '50%'};
+    width: ${({ widthlg }) => widthlg || '50%'};
     column-count: 2;
   }
 
   @media screen and ${({ theme }) => theme.media.MD} {
-    width: ${({ widthMD }) => widthMD || '80%'};
+    width: ${({ widthmd }) => widthmd || '80%'};
   }
 
   @media screen and ${({ theme }) => theme.media.XS} {
-    width: ${({ widthXS }) => widthXS || '100%'};
+    width: ${({ widthxs }) => widthxs || '100%'};
   }
 `;
 
